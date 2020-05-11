@@ -9,7 +9,7 @@ namespace Zaidimas
      public delegate void Kurimas();
     class Account
     {
-        Kurimas kurimoDelegatas = kv
+        Kurimas kurimoDelegatas = Kvietimas;
         public event Kurimas vardasIvestas;
 
         public string Vardas { get; set; }
@@ -21,15 +21,20 @@ namespace Zaidimas
             {
                 throw new Exception("Vardo laukas negali buti tuscias");
             }
-           // if (Lygis == null || Lygis < 1 || Lygis > 3)
-           // {
-           //     throw new Exception("Neivestas arba neteisingai ivestas zaidimo lygis");
-           // }
-            Vardas = vardas;
-            Lygis = lygis;
+            if (Lygis == null || Lygis < 1 || Lygis > 3)
+            {
+                throw new Exception("Neivestas arba neteisingai ivestas zaidimo lygis");
+            }
+            vardas = vardas;
+            lygis = lygis;
 
             MetodasVardasIvestas();
         }
+        public void delegatoPaleidimas()
+        {
+            kurimoDelegatas();
+        }
+
         public virtual void MetodasVardasIvestas()
         {
 
@@ -37,10 +42,10 @@ namespace Zaidimas
         }
         
         
-        public void Kvietimas()
+        static public void Kvietimas()
         {
-            Veiksmas veiksmas = new Veiksmas(5);
-            veiksmas.Skaiciavimas(5);
+            Veiksmas veiksmas = new Veiksmas();
+            veiksmas.Skaiciavimas();
         }
 
     }

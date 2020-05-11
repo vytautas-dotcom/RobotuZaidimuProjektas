@@ -12,10 +12,6 @@ namespace Zaidimas
         {
             //Programos vykdymo komandos
 
-            Console.WriteLine("Sukurkite savo robotui varda");
-            string vardas = Console.ReadLine();
-            Account account = new Account(vardas);
-
             #region AutomatinisValdymas
             //Konstravimas konstravimas = new Konstravimas();
             //konstravimas.visiDaliuVariantai();

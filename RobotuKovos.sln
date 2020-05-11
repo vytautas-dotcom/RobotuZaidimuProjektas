@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robotai", "Robotai\Robotai.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotoDalys", "RobotoDalys\RobotoDalys.csproj", "{FF4D1938-4EEF-49FC-8AA2-B51370731094}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kova", "Kova\Kova.csproj", "{9606B2FB-648F-47FF-B2AF-012FCF984262}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{FF4D1938-4EEF-49FC-8AA2-B51370731094}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FF4D1938-4EEF-49FC-8AA2-B51370731094}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FF4D1938-4EEF-49FC-8AA2-B51370731094}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9606B2FB-648F-47FF-B2AF-012FCF984262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9606B2FB-648F-47FF-B2AF-012FCF984262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9606B2FB-648F-47FF-B2AF-012FCF984262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9606B2FB-648F-47FF-B2AF-012FCF984262}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

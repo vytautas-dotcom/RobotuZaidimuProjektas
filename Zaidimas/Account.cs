@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Zaidimas
 {
-    //pakeitimas
+    //pakeitimas2
      public delegate void Kurimas();
     class Account
     {

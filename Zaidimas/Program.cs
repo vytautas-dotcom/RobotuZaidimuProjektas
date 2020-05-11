@@ -10,6 +10,8 @@ namespace Zaidimas
     {
         static void Main(string[] args)
         {
+            //Programos vykdymo komandos
+
             #region AutomatinisValdymas
             //Konstravimas konstravimas = new Konstravimas();
             //konstravimas.visiDaliuVariantai();

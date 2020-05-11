@@ -8,6 +8,7 @@ namespace Zaidimas
 {
     class Account
     {
+        //Vartotojas
         public string Vardas { get; set; }
         public int Lygis { get; set; }
         public int Suma { get; set; } = 100;
@@ -21,6 +22,7 @@ namespace Zaidimas
             {
                 throw new Exception("Neivestas arba neteisingai ivestas zaidimo lygis");
             }
+
             Vardas = vardas;
             Lygis = lygis;
         }        

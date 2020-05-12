@@ -5,8 +5,6 @@ VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zaidimas", "Zaidimas\Zaidimas.csproj", "{0D291BCE-2AAE-41F6-93BD-4F51A671256C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KonstravimasPrisijungimas", "KonstravimasPrisijungimas\KonstravimasPrisijungimas.csproj", "{43EDA214-50D9-4715-88A7-57D021CE49BA}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robotai", "Robotai\Robotai.csproj", "{B2E45D64-68A9-4780-A820-0C99E404383C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotoDalys", "RobotoDalys\RobotoDalys.csproj", "{FF4D1938-4EEF-49FC-8AA2-B51370731094}"
@@ -25,10 +23,6 @@ Global
 		{0D291BCE-2AAE-41F6-93BD-4F51A671256C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0D291BCE-2AAE-41F6-93BD-4F51A671256C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0D291BCE-2AAE-41F6-93BD-4F51A671256C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{43EDA214-50D9-4715-88A7-57D021CE49BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{43EDA214-50D9-4715-88A7-57D021CE49BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{43EDA214-50D9-4715-88A7-57D021CE49BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{43EDA214-50D9-4715-88A7-57D021CE49BA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{B2E45D64-68A9-4780-A820-0C99E404383C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{B2E45D64-68A9-4780-A820-0C99E404383C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2E45D64-68A9-4780-A820-0C99E404383C}.Release|Any CPU.ActiveCfg = Release|Any CPU

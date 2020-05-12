@@ -9,21 +9,27 @@ namespace RobotuZaidimas02
     class Account
     {
         public string Vardas { get; set; }
-        public int? Lygis { get; set; }
+        //public int? Lygis { get; set; }
         public int Suma { get; set; } = 5000;
-        public Account(string vardas, int lygis)
+        public Account(string vardas)
         {
             if (string.IsNullOrWhiteSpace(vardas))
             {
                 throw new Exception("Vardo laukas negali buti tuscias");
             }
-            if (Lygis == null || Lygis < 1 || Lygis > 3)
-            {
-                throw new Exception("Neivestas arba neteisingai ivestas zaidimo lygis");
-            }
-            vardas = vardas;
-            lygis = lygis;
+            //if (Lygis == null || Lygis < 1 || Lygis > 3)
+            //{
+            //    throw new Exception("Neivestas arba neteisingai ivestas zaidimo lygis");
+            //}
+            Vardas = vardas;
+            //lygis = lygis;
         }
+        public void kreipimasisIRankiniKonstravima()
+        {
+            if (!string.IsNullOrEmpty)
+            {
 
+            }
+        }
     }
 }

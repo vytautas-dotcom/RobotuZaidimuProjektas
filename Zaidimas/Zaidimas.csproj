@@ -51,17 +51,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\KonstravimasPrisijungimas\KonstravimasPrisijungimas.csproj">
-      <Project>{43eda214-50d9-4715-88a7-57d021ce49ba}</Project>
-      <Name>KonstravimasPrisijungimas</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Robotai\Robotai.csproj">
       <Project>{b2e45d64-68a9-4780-a820-0c99e404383c}</Project>
       <Name>Robotai</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\RobotoDalys\RobotoDalys.csproj">
-      <Project>{ff4d1938-4eef-49fc-8aa2-b51370731094}</Project>
-      <Name>RobotoDalys</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

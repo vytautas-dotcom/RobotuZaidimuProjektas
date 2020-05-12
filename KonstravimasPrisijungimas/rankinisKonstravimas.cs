@@ -8,6 +8,7 @@ namespace KonstravimasPrisijungimas
 {
     class rankinisKonstravimas
     {
+        accoun
         public string Dalis { get; set; }
         public rankinisKonstravimas(string a)
         {
@@ -20,7 +21,7 @@ namespace KonstravimasPrisijungimas
             + $"WHERE {Dalis}='{b}' ";
 
         }
-
+        public void RankinisIsrinkimas()
     }
 
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RobotoDalys
 {
-    class Variklis : IDalis
+    public class Variklis : IDalis
     {
         public string Pavadinimas { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int Gyvybe { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

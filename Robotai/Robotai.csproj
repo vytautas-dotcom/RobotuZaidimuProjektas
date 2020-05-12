@@ -49,11 +49,5 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\RobotoDalys\RobotoDalys.csproj">
-      <Project>{ff4d1938-4eef-49fc-8aa2-b51370731094}</Project>
-      <Name>RobotoDalys</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

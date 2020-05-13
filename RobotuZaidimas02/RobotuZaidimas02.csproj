@@ -44,11 +44,27 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account.cs" />
+    <Compile Include="biologinisGinklas.cs" />
+    <Compile Include="botRobot.cs" />
     <Compile Include="DbPrisijungimas.cs" />
+    <Compile Include="Ginklai.cs" />
+    <Compile Include="IDalis.cs" />
+    <Compile Include="IsmaniejiGinklai.cs" />
+    <Compile Include="Lazeris.cs" />
+    <Compile Include="Patranka.cs" />
+    <Compile Include="plazminisGinklas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Raketos.cs" />
     <Compile Include="randomKonstravimas.cs" />
     <Compile Include="rankinisKonstravimas.cs" />
+    <Compile Include="Robotas.cs" />
+    <Compile Include="Sarvai.cs" />
+    <Compile Include="Taranas.cs" />
+    <Compile Include="userRobot.cs" />
+    <Compile Include="Valdymas.cs" />
+    <Compile Include="Variklis.cs" />
+    <Compile Include="Vaziuokle.cs" />
     <Compile Include="visiVariantai.cs" />
   </ItemGroup>
   <ItemGroup>

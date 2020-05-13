@@ -16,9 +16,10 @@ namespace RobotuZaidimas02
             rankinisKonstravimas rankinisKonstravimas = new rankinisKonstravimas();
             rankinisKonstravimas.RankinisIsrinkimas();
 
+
+            Vaziuokle vaziuokle = new Vaziuokle();
             
-            IDalis vaziuokle = new Vaziuokle();
-            Console.WriteLine(vaziuokle.Pavadinimas);
+            vaziuokle.getVaziuokle();
             Console.ReadKey();
 
             #region AutomatinisValdymas

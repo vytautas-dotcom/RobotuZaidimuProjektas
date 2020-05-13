@@ -14,17 +14,19 @@ namespace KonstravimasPrisijungimas
         {
             queryString = a;
         }
-        public int Gyvybe { get; set; }
-        public int Kaina { get; set; }
         public int Id { get; set; }
         public string Dalis { get; set; }
+        public int Galia { get; set; }
+        public int Kaina { get; set; }
+        public int Svoris { get; set; }
 
         public void Gyvbe()
         {
-            int gyvybe = 0;
-            int kaina = 0;
             int id = 0;
             string dalis = null;
+            int galia = 0;
+            int kaina = 0;
+            int svoris = 0;
 
             using (SqlConnection connection =
                     new SqlConnection(connectionString))
@@ -42,8 +44,9 @@ namespace KonstravimasPrisijungimas
 
                         id = (int)reader[0];
                         dalis = (string)reader[1];
-                        kaina = (int)reader[2];
-                        //svoris = (int)reader[2];
+                        galia = (int)reader[2];
+                        kaina = (int)reader[3];
+                        svoris = (int)reader[4];
                         
 
                     }
@@ -57,8 +60,9 @@ namespace KonstravimasPrisijungimas
             }   
             Id = id;
             Dalis = dalis;
+            Galia = galia;
             Kaina = kaina;
-            //Dalis = dalis;
+            Svoris = svoris;
 
         }
 

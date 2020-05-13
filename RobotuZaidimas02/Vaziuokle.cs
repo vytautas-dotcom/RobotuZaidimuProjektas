@@ -16,6 +16,10 @@ namespace RobotoDalys
         {
             Pavadinimas = a;
         }
+        public void getVaziuokle()
+        {
+            Console.WriteLine(Pavadinimas);
+        }
 
         public void didejaGyvybe()
         {

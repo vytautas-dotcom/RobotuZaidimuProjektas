@@ -21,48 +21,51 @@ namespace KonstravimasPrisijungimas
         
     class rankinisKonstravimas
     {
-        public IDalis Dalis { get; set; }
-        //public rankinisKonstravimas(string a)
-        //{
-        //    Dalis = a;
-        //}
+        
         public string UzklausaString(string b, int c)
         {
 
-            return $"SELECT Id, {b}, Kaina from {b} Where Id={c} ";
+            return $"SELECT Id, {b}, Galia, Kaina, Svoris from {b} Where Id={c} ";
 
         }
+        
         public void RankinisIsrinkimas()
         {
+            
             for (int j = 1; j <= 6; j++)
             {
+                string[] vardas = { };
+                #region virsutineEilute
                 Console.WriteLine("**********************************************");
                 Console.ForegroundColor = ConsoleColor.Red;
+                #endregion
                 Console.WriteLine($"                   {Enum.GetName(typeof(Dalys), j)}");
+                #region virsutineEilute
                 Console.ResetColor();
                 Console.WriteLine("**********************************************");
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine($"Id   Rusis                               Kaina");
                 Console.ResetColor();
+                #endregion
 
-                string b = daliuIstraukimas(j);
-                
+                daliuIstraukimas(j, vardas);
 
+                #region apatineEilute
                 Console.WriteLine("**********************************************");
                 Console.WriteLine($"Iveskite norimos rusies Id ir spauskite \"ENTER\"");
-                
-                int ivedamasId = Int32.Parse(Console.ReadLine());
-                inicializavimasKlasese(ivedamasId, b);
+                #endregion
+
+                #region ApatineEilute
                 Console.WriteLine("----------------------------------------------");
                 Console.WriteLine();
                 Console.WriteLine();
+                #endregion
             }
             Console.WriteLine("Vyksta roboto konstravimas..");
             
         }
-        public string daliuIstraukimas(int a)
+        public void daliuIstraukimas(int a, string[] vardas)
         {
-            string b = null;
             
             for (int i = 1; i <= 3; i++)
             {
@@ -71,34 +74,44 @@ namespace KonstravimasPrisijungimas
                 Console.WriteLine("----------------------------------------------");
                 DbPrisijungimas dbPrisijungimas = new DbPrisijungimas(UzklausaString(Enum.GetName(typeof(Dalys), a), i));
                 dbPrisijungimas.Gyvbe();
+                
+                #region lentelesIsvedimas
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
                 Console.WriteLine(dbPrisijungimas.Id + "    " + dbPrisijungimas.Dalis + " " + dbPrisijungimas.Kaina);
                 Console.ResetColor();
-                b = dbPrisijungimas.Dalis;
+                #endregion
+                vardas[i] = dbPrisijungimas.Dalis;
             }
-            return b;
+
+            int ivedamasId = Int32.Parse(Console.ReadLine());
+            inicializavimasKlasese(a, vardas[ivedamasId]);
         }
         public void inicializavimasKlasese(int a, string b)
         {
+            //UzklausaString(ba, b);
+            //DbPrisijungimas dbPrisijungimas = new DbPrisijungimas(UzklausaString2(Enum.GetName(typeof(Dalys), a), j));
+            //dbPrisijungimas.Gyvbe();
+
             switch (a)
             {
                 case 1:
-                    new Vaziuokle().setVaziuokle(b);
+                    Vaziuokle vaziuokle = new Vaziuokle();
+                    vaziuokle.setVaziuokle(b);
                     break;
                 case 2:
-                    new Sarvai().Pavadinimas = b;
+                    new Sarvai().setSarvai(b);
                     break;
                 case 3:
-                    new Variklis().Pavadinimas = b;
+                    new Variklis().setVariklis(b);
                     break;
                 case 4:
-                    new IsmaniejiGinklai().Pavadinimas = b;
+                    new IsmaniejiGinklai().setIsmaniejiGinklai(b);
                     break;
                 case 5:
-                    new Ginklai().Pavadinimas = b;
+                    new Ginklai().setGinklai(b);
                     break;
                 case 6:
-                    new Valdymas().Pavadinimas = b;
+                    new Valdymas().setValdymas(b);
                     break;
                 default:
                     break;

@@ -3,6 +3,17 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
+<<<<<<< HEAD
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zaidimas", "Zaidimas\Zaidimas.csproj", "{0D291BCE-2AAE-41F6-93BD-4F51A671256C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Robotai", "Robotai\Robotai.csproj", "{B2E45D64-68A9-4780-A820-0C99E404383C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotoDalys", "RobotoDalys\RobotoDalys.csproj", "{FF4D1938-4EEF-49FC-8AA2-B51370731094}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kova", "Kova\Kova.csproj", "{9606B2FB-648F-47FF-B2AF-012FCF984262}"
+EndProject
+>>>>>>> vytas
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RobotuZaidimas02", "RobotuZaidimas02\RobotuZaidimas02.csproj", "{E15C5842-135D-4165-A1E7-1AAC404C7608}"
 EndProject
 Global
@@ -11,6 +22,25 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+<<<<<<< HEAD
+=======
+		{0D291BCE-2AAE-41F6-93BD-4F51A671256C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D291BCE-2AAE-41F6-93BD-4F51A671256C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D291BCE-2AAE-41F6-93BD-4F51A671256C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D291BCE-2AAE-41F6-93BD-4F51A671256C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2E45D64-68A9-4780-A820-0C99E404383C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2E45D64-68A9-4780-A820-0C99E404383C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2E45D64-68A9-4780-A820-0C99E404383C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2E45D64-68A9-4780-A820-0C99E404383C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF4D1938-4EEF-49FC-8AA2-B51370731094}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF4D1938-4EEF-49FC-8AA2-B51370731094}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF4D1938-4EEF-49FC-8AA2-B51370731094}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF4D1938-4EEF-49FC-8AA2-B51370731094}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9606B2FB-648F-47FF-B2AF-012FCF984262}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9606B2FB-648F-47FF-B2AF-012FCF984262}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9606B2FB-648F-47FF-B2AF-012FCF984262}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9606B2FB-648F-47FF-B2AF-012FCF984262}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> vytas
 		{E15C5842-135D-4165-A1E7-1AAC404C7608}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E15C5842-135D-4165-A1E7-1AAC404C7608}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E15C5842-135D-4165-A1E7-1AAC404C7608}.Release|Any CPU.ActiveCfg = Release|Any CPU

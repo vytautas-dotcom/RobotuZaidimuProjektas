@@ -55,11 +55,5 @@
     <Compile Include="Vaziuokle.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\KonstravimasPrisijungimas\KonstravimasPrisijungimas.csproj">
-      <Project>{43eda214-50d9-4715-88a7-57d021ce49ba}</Project>
-      <Name>KonstravimasPrisijungimas</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

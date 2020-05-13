@@ -1,12 +1,13 @@
-﻿using System;
+﻿using RobotoDalys;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RobotoDalys
+namespace RobotuZaidimas02
 {
-    public class Sarvai : IDalis
+    class Ginklai : IDalis
     {
         public string Pavadinimas { get; set; }
         public int Gyvybe { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

@@ -16,14 +16,14 @@ namespace KonstravimasPrisijungimas
         }
         public int Gyvybe { get; set; }
         public int Kaina { get; set; }
-        public int Svoris { get; set; }
+        public int Id { get; set; }
         public string Dalis { get; set; }
 
         public void Gyvbe()
         {
             int gyvybe = 0;
             int kaina = 0;
-            int svoris = 0;
+            int id = 0;
             string dalis = null;
 
             using (SqlConnection connection =
@@ -40,10 +40,11 @@ namespace KonstravimasPrisijungimas
                     while (reader.Read())
                     {
 
-                        gyvybe = (int)reader[0];
-                        kaina = (int)reader[1];
-                        svoris = (int)reader[2];
-                        dalis = (string)reader[3];
+                        id = (int)reader[0];
+                        dalis = (string)reader[1];
+                        kaina = (int)reader[2];
+                        //svoris = (int)reader[2];
+                        
 
                     }
                     reader.Close();
@@ -53,11 +54,11 @@ namespace KonstravimasPrisijungimas
                     Console.WriteLine(ex.Message);
                 }
 
-            }
-            Gyvybe = gyvybe;
-            Kaina = kaina;
-            Svoris = svoris;
+            }   
+            Id = id;
             Dalis = dalis;
+            Kaina = kaina;
+            //Dalis = dalis;
 
         }
 

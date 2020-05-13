@@ -47,6 +47,7 @@
     <Compile Include="biologinisGinklas.cs" />
     <Compile Include="botRobot.cs" />
     <Compile Include="DbPrisijungimas.cs" />
+    <Compile Include="Ginklai.cs" />
     <Compile Include="IDalis.cs" />
     <Compile Include="IsmaniejiGinklai.cs" />
     <Compile Include="Lazeris.cs" />

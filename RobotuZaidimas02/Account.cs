@@ -24,12 +24,6 @@ namespace RobotuZaidimas02
             Vardas = vardas;
             //lygis = lygis;
         }
-        public void kreipimasisIRankiniKonstravima()
-        {
-            if (!string.IsNullOrEmpty)
-            {
-
-            }
+        
         }
     }
-}

@@ -8,7 +8,7 @@ namespace RobotoDalys
 {
     public class Valdymas : IDalis
     {
-        public string Pavadinimas { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        public string Pavadinimas { get; set; }
         public int Gyvybe { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int Kaina { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int Svoris { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using KonstravimasPrisijungimas;
+using RobotoDalys;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +13,13 @@ namespace RobotuZaidimas02
         static void Main(string[] args)
         {
             Account account = new Account("Killer");
+            rankinisKonstravimas rankinisKonstravimas = new rankinisKonstravimas();
+            rankinisKonstravimas.RankinisIsrinkimas();
+
+            
+            IDalis vaziuokle = new Vaziuokle();
+            Console.WriteLine(vaziuokle.Pavadinimas);
+            Console.ReadKey();
 
             #region AutomatinisValdymas
             //Konstravimas konstravimas = new Konstravimas();

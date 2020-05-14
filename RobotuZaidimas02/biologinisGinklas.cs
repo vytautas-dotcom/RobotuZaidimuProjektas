@@ -12,7 +12,10 @@ namespace RobotoDalys
         public int Gyvybe { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int Kaina { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int Svoris { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-
+        public void setPavadinimas(string a)
+        {
+            Pavadinimas = a;
+        }
         public void didejaGyvybe()
         {
             throw new NotImplementedException();

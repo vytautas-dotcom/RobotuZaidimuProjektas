@@ -6,6 +6,7 @@
             int Gyvybe { get; set; }
             int Kaina { get; set; }
             int Svoris { get; set; }
+            void setPavadinimas(string a);
 
             void didejaGyvybe();
 

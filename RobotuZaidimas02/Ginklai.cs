@@ -13,7 +13,7 @@ namespace RobotuZaidimas02
         public int Gyvybe { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int Kaina { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int Svoris { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public void setGinklai(string a)
+        public void setPavadinimas(string a)
         {
             Pavadinimas = a;
         }

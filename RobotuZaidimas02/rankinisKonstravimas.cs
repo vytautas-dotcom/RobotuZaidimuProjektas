@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace KonstravimasPrisijungimas
 {
-    enum Dalys
+    enum Segmentai
     {
         Vaziuokle = 1,
         Sarvai,
@@ -19,7 +19,7 @@ namespace KonstravimasPrisijungimas
     }
     
         
-    class rankinisKonstravimas
+    class rankinisKonstravimas : abstractKonstravimas
     {
         
         public string UzklausaString(string b, int c)
@@ -34,12 +34,12 @@ namespace KonstravimasPrisijungimas
             
             for (int j = 1; j <= 6; j++)
             {
-                string[] vardas = { };
+                
                 #region virsutineEilute
                 Console.WriteLine("**********************************************");
                 Console.ForegroundColor = ConsoleColor.Red;
                 #endregion
-                Console.WriteLine($"                   {Enum.GetName(typeof(Dalys), j)}");
+                Console.WriteLine($"                   {Enum.GetName(typeof(Segmentai), j)}");
                 #region virsutineEilute
                 Console.ResetColor();
                 Console.WriteLine("**********************************************");
@@ -48,7 +48,7 @@ namespace KonstravimasPrisijungimas
                 Console.ResetColor();
                 #endregion
 
-                daliuIstraukimas(j, vardas);
+                daliuIstraukimas(j);
 
                 #region apatineEilute
                 Console.WriteLine("**********************************************");
@@ -64,15 +64,16 @@ namespace KonstravimasPrisijungimas
             Console.WriteLine("Vyksta roboto konstravimas..");
             
         }
-        public void daliuIstraukimas(int a, string[] vardas)
+        public void daliuIstraukimas(int segmentoPavadinimoNr)
         {
-            
-            for (int i = 1; i <= 3; i++)
+            string[] vardas = new string[3];
+
+            for (int i = 0; i < 3; i++)
             {
 
 
                 Console.WriteLine("----------------------------------------------");
-                DbPrisijungimas dbPrisijungimas = new DbPrisijungimas(UzklausaString(Enum.GetName(typeof(Dalys), a), i));
+                DbPrisijungimas dbPrisijungimas = new DbPrisijungimas(UzklausaString(Enum.GetName(typeof(Segmentai), segmentoPavadinimoNr), i+1));
                 dbPrisijungimas.Gyvbe();
                 
                 #region lentelesIsvedimas
@@ -83,42 +84,74 @@ namespace KonstravimasPrisijungimas
                 vardas[i] = dbPrisijungimas.Dalis;
             }
 
-            int ivedamasId = Int32.Parse(Console.ReadLine());
-            inicializavimasKlasese(a, vardas[ivedamasId]);
+            Console.WriteLine("Iveskite norimos dalies Id");
+            int pasirinkimasPagalId = Int32.Parse(Console.ReadLine());
+            inicializavimasKlasese(segmentoPavadinimoNr, vardas[pasirinkimasPagalId-1]);
         }
-        public void inicializavimasKlasese(int a, string b)
+        public void inicializavimasKlasese(int segmentoPavadinimoNr, string daliesPavadinimas)
         {
-            //UzklausaString(ba, b);
-            //DbPrisijungimas dbPrisijungimas = new DbPrisijungimas(UzklausaString2(Enum.GetName(typeof(Dalys), a), j));
-            //dbPrisijungimas.Gyvbe();
+            IDalis dalis;
 
-            switch (a)
+            switch (segmentoPavadinimoNr)
             {
                 case 1:
-                    Vaziuokle vaziuokle = new Vaziuokle();
-                    vaziuokle.setVaziuokle(b);
+                    IDalis vaziuokle = new Vaziuokle();
+                    vaziuokle.setPavadinimas(daliesPavadinimas);
                     break;
                 case 2:
-                    new Sarvai().setSarvai(b);
+                    IDalis sarvai = new Sarvai();
+                    sarvai.setPavadinimas(daliesPavadinimas);
                     break;
                 case 3:
-                    new Variklis().setVariklis(b);
+                    IDalis variklis = new Variklis();
+                    variklis.setPavadinimas(daliesPavadinimas);
                     break;
                 case 4:
-                    new IsmaniejiGinklai().setIsmaniejiGinklai(b);
+                    IDalis ismaniejiGinklai = new IsmaniejiGinklai();
+                    ismaniejiGinklai.setPavadinimas(daliesPavadinimas);
                     break;
                 case 5:
-                    new Ginklai().setGinklai(b);
+                    IDalis ginklai = new Ginklai();
+                    ginklai.setPavadinimas(daliesPavadinimas);
                     break;
                 case 6:
-                    new Valdymas().setValdymas(b);
+                    IDalis valdymas = new Valdymas();
+                    valdymas.setPavadinimas(daliesPavadinimas);
                     break;
                 default:
                     break;
             }
         }
-        
 
+        public override IDalis pridetiVaziuokle(string a)
+        {
+            return new Vaziuokle(a);
+        }
+
+        public override IDalis pridetiSarvai(string a)
+        {
+            return new Sarvai(a);
+        }
+
+        public override IDalis pridetiVariklis()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override IDalis pridetiIsmaniejiGinklai()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override IDalis pridetiGinklai()
+        {
+            throw new NotImplementedException();
+        }
+
+        public override IDalis pridetiValdymas()
+        {
+            throw new NotImplementedException();
+        }
     }
 
 }

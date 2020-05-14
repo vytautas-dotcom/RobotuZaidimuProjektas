@@ -43,6 +43,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="abstractKonstravimas.cs" />
     <Compile Include="Account.cs" />
     <Compile Include="biologinisGinklas.cs" />
     <Compile Include="botRobot.cs" />

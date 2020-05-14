@@ -17,8 +17,9 @@ namespace RobotuZaidimas02
             rankinisKonstravimas.RankinisIsrinkimas();
 
 
+
+
             Vaziuokle vaziuokle = new Vaziuokle();
-            
             vaziuokle.getVaziuokle();
             Console.ReadKey();
 

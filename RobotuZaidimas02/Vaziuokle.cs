@@ -12,6 +12,7 @@ namespace RobotoDalys
         public int Gyvybe { get; set; }
         public int Kaina { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public int Svoris { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        
         public void setPavadinimas(string a)
         {
             Pavadinimas = a;
@@ -30,5 +31,7 @@ namespace RobotoDalys
         {
             throw new NotImplementedException();
         }
+
+        
     }
 }

@@ -19,9 +19,9 @@ namespace KonstravimasPrisijungimas
     }
     
         
-    class rankinisKonstravimas : abstractKonstravimas
+    class rankinisKonstravimas
     {
-        
+        Dictionary<string, (int, int, int)> userRobot = new Dictionary<string, (int, int, int)>();
         public string UzklausaString(string b, int c)
         {
 
@@ -67,6 +67,9 @@ namespace KonstravimasPrisijungimas
         public void daliuIstraukimas(int segmentoPavadinimoNr)
         {
             string[] vardas = new string[3];
+            int[] galia = new int[3];
+            int[] kaina = new int[3];
+            int[] svoris = new int[3];
 
             for (int i = 0; i < 3; i++)
             {
@@ -82,76 +85,42 @@ namespace KonstravimasPrisijungimas
                 Console.ResetColor();
                 #endregion
                 vardas[i] = dbPrisijungimas.Dalis;
+                galia[i] = dbPrisijungimas.Galia;
+                kaina[i] = dbPrisijungimas.Kaina;
+                svoris[i] = dbPrisijungimas.Svoris;
+
             }
 
             Console.WriteLine("Iveskite norimos dalies Id");
             int pasirinkimasPagalId = Int32.Parse(Console.ReadLine());
-            inicializavimasKlasese(segmentoPavadinimoNr, vardas[pasirinkimasPagalId-1]);
+            inicializavimasKlasese(vardas[pasirinkimasPagalId-1],
+                galia[pasirinkimasPagalId-1],
+                kaina[pasirinkimasPagalId-1],
+                svoris[pasirinkimasPagalId-1]);
         }
-        public void inicializavimasKlasese(int segmentoPavadinimoNr, string daliesPavadinimas)
+        public void inicializavimasKlasese(string a, int b, int c, int d)
         {
-            IDalis dalis;
+            userRobot.Add(a, (b, c, d));
 
-            switch (segmentoPavadinimoNr)
+        }
+        
+        public void robotoParametrai()
+        {
+            int i = 1;
+            Console.WriteLine("------------------------------------------------------");
+            Console.WriteLine("Sukonstravote super");
+            Console.WriteLine("techmologini \"Killer\"");
+            Console.WriteLine("klases robota");
+            Console.WriteLine("------------------------------------------------------");
+            Console.WriteLine("Jusu pasirinktos dalys:");
+            foreach (var item in userRobot)
             {
-                case 1:
-                    IDalis vaziuokle = new Vaziuokle();
-                    vaziuokle.setPavadinimas(daliesPavadinimas);
-                    break;
-                case 2:
-                    IDalis sarvai = new Sarvai();
-                    sarvai.setPavadinimas(daliesPavadinimas);
-                    break;
-                case 3:
-                    IDalis variklis = new Variklis();
-                    variklis.setPavadinimas(daliesPavadinimas);
-                    break;
-                case 4:
-                    IDalis ismaniejiGinklai = new IsmaniejiGinklai();
-                    ismaniejiGinklai.setPavadinimas(daliesPavadinimas);
-                    break;
-                case 5:
-                    IDalis ginklai = new Ginklai();
-                    ginklai.setPavadinimas(daliesPavadinimas);
-                    break;
-                case 6:
-                    IDalis valdymas = new Valdymas();
-                    valdymas.setPavadinimas(daliesPavadinimas);
-                    break;
-                default:
-                    break;
+                Console.WriteLine(Enum.GetName(typeof(Segmentai), i) + "\t\t\t\t" + item.Key);
+                i++;
             }
+            Console.WriteLine("------------------------------------------------------");
         }
-
-        public override IDalis pridetiVaziuokle(string a)
-        {
-            return new Vaziuokle(a);
-        }
-
-        public override IDalis pridetiSarvai(string a)
-        {
-            return new Sarvai(a);
-        }
-
-        public override IDalis pridetiVariklis()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override IDalis pridetiIsmaniejiGinklai()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override IDalis pridetiGinklai()
-        {
-            throw new NotImplementedException();
-        }
-
-        public override IDalis pridetiValdymas()
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 
 }

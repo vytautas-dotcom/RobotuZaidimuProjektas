@@ -9,7 +9,7 @@ namespace Robotai.RobotoDalys
 {
     class userRobot : Robotas
     {
-        public Vaziuokle Vaziuokle { get; set; }
+        public object Vaziuokle { get; set; }
         public Sarvai Sarvai { get; set; }
         public Variklis Variklis { get; set; }
         public Valdymas Valdymas { get; set; }

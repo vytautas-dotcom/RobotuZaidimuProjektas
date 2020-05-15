@@ -9,11 +9,11 @@ namespace RobotuZaidimas02
 {
     abstract class abstractKonstravimas
     {
-        public abstract IDalis pridetiVaziuokle();
-        public abstract IDalis pridetiSarvai();
-        public abstract IDalis pridetiVariklis();
-        public abstract IDalis pridetiIsmaniejiGinklai();
-        public abstract IDalis pridetiGinklai();
-        public abstract IDalis pridetiValdymas();
+        public abstract void pridetiVaziuokle1(string a);
+        public abstract void pridetiSarvai(string a);
+        public abstract void pridetiVariklis(string a);
+        public abstract void pridetiIsmaniejiGinklai(string a);
+        public abstract void pridetiGinklai(string a);
+        public abstract void pridetiValdymas(string a);
     }
 }

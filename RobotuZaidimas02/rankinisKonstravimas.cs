@@ -22,6 +22,7 @@ namespace KonstravimasPrisijungimas
     class rankinisKonstravimas
     {
         Dictionary<string, (int, int, int)> userRobot = new Dictionary<string, (int, int, int)>();
+        Random rnd = new Random();
         public string UzklausaString(string b, int c)
         {
 
@@ -92,6 +93,7 @@ namespace KonstravimasPrisijungimas
             }
 
             Console.WriteLine("Iveskite norimos dalies Id");
+            //int pasirinkimasPagalId = rnd.Next(1, 4);
             int pasirinkimasPagalId = Int32.Parse(Console.ReadLine());
             inicializavimasKlasese(vardas[pasirinkimasPagalId-1],
                 galia[pasirinkimasPagalId-1],

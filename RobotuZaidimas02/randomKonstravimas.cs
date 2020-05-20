@@ -1,81 +1,128 @@
-﻿//using System;
-//using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
+﻿using RobotoDalys;
+using RobotuZaidimas02;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-//namespace KonstravimasPrisijungimas
-//{
-//    enum Segmentai1
-//    {
-//        Vaziuokle,
-//        Sarvai,
-//        Variklis,
-//        ismaniejiGinklai,
-//        Ginklai,
-//        Valdymas
-
-//    }
-//    class randomKonstravimas
-//    {
-//        List<string> listas = new List<string>();
-//        public string[] listas1 = new string[6];
-//        int p = 0;
-//        public void randomDaliuVariantai()
-//        {
-//            var rand = new Random();
-//            //rand.NextDouble() - 0-1
-//            int a = rand.Next(1, 4);
-//            int b = rand.Next(1, 4);
-//            int c = rand.Next(1, 4);
-//            int d = rand.Next(1, 4);
-//            int e = rand.Next(1, 4);
-//            int f = rand.Next(1, 4);
-
-//            vidineUzklausa(a, b, c, d, e, f);
-//        }
-//        public void vidineUzklausa(int a, int b, int c, int d, int e, int f)
-//        {
-//            int[] dalys = { a, b, c, d, e, f };
-//            int visaGyvybe = 0;
-//            int visoKaina = 0;
-//            int visoSvoris = 0;
+namespace KonstravimasPrisijungimas
+{
+    enum rSegmentai
+    {
+        Vaziuokle = 1,
+        Sarvai,
+        Variklis,
+        ismaniejiGinklai,
+        Ginklai,
+        Valdymas
+    }
 
 
-//            for (int g = 0; g < 6; g++)
-//            {
-//                string lentele = Enum.GetName(typeof(Segmentai1), g);
-//                int dalis = dalys[g];
+    class randomKonstravimas
+    {
+        Dictionary<string, (int, int, int)> botRobot = new Dictionary<string, (int, int, int)>();
+        Random rnd = new Random();
+        public string UzklausaString(string b, int c)
+        {
 
-//                var query = $"SELECT Gyvybe, Kaina, Svoris, {lentele} from {lentele} WHERE Id={dalis}";
+            return $"SELECT Id, {b}, Galia, Kaina, Svoris from {b} Where Id={c} ";
 
-//                DbPrisijungimas dbPrisijungimas = new DbPrisijungimas(query);
-//                dbPrisijungimas.Gyvbe();
+        }
 
-//                visaGyvybe += dbPrisijungimas.Gyvybe;
-//                visoKaina += dbPrisijungimas.Kaina;
-//                visoSvoris += dbPrisijungimas.Svoris;
-//                listas.Add(dbPrisijungimas.Dalis);
+        public void RankinisIsrinkimas()
+        {
+
+            for (int j = 1; j <= 6; j++)
+            {
+
+                #region virsutineEilute
+                Console.WriteLine("**********************************************");
+                Console.ForegroundColor = ConsoleColor.Red;
+                #endregion
+                Console.WriteLine($"                   {Enum.GetName(typeof(rSegmentai), j)}");
+                #region virsutineEilute
+                Console.ResetColor();
+                Console.WriteLine("**********************************************");
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"Id   Rusis                               Kaina");
+                Console.ResetColor();
+                #endregion
+
+                rdaliuIstraukimas(j);
+
+                #region apatineEilute
+                Console.WriteLine("**********************************************");
+                Console.WriteLine($"Iveskite norimos rusies Id ir spauskite \"ENTER\"");
+                #endregion
+
+                #region ApatineEilute
+                Console.WriteLine("----------------------------------------------");
+                Console.WriteLine();
+                Console.WriteLine();
+                #endregion
+            }
+            Console.WriteLine("Vyksta roboto konstravimas..");
+
+        }
+        public void rdaliuIstraukimas(int segmentoPavadinimoNr)
+        {
+            string[] vardas = new string[3];
+            int[] galia = new int[3];
+            int[] kaina = new int[3];
+            int[] svoris = new int[3];
+
+            for (int i = 0; i < 3; i++)
+            {
 
 
-//            }
-//            Console.WriteLine($"Gyvybe-{visaGyvybe}, Kaina-{visoKaina}, Svoris-{visoSvoris}");
-//        }
-//        public void showList()
-//        {
-//            foreach (var item in listas)
-//            {
-//                Console.WriteLine(item);
-//            }
-//        }
-//        public void createList()
-//        {
-//            foreach (var item in listas)
-//            {
-//                listas1[p] = item;
-//                p++;
-//            }
+                Console.WriteLine("----------------------------------------------");
+                DbPrisijungimas dbPrisijungimas = new DbPrisijungimas(UzklausaString(Enum.GetName(typeof(rSegmentai), segmentoPavadinimoNr), i + 1));
+                dbPrisijungimas.Gyvbe();
 
-//        }
-//    }
-//}
+                #region lentelesIsvedimas
+                Console.ForegroundColor = ConsoleColor.DarkYellow;
+                Console.WriteLine(dbPrisijungimas.Id + "    " + dbPrisijungimas.Dalis + " " + dbPrisijungimas.Kaina);
+                Console.ResetColor();
+                #endregion
+                vardas[i] = dbPrisijungimas.Dalis;
+                galia[i] = dbPrisijungimas.Galia;
+                kaina[i] = dbPrisijungimas.Kaina;
+                svoris[i] = dbPrisijungimas.Svoris;
+
+            }
+
+            Console.WriteLine("Iveskite norimos dalies Id");
+            int pasirinkimasPagalId = rnd.Next(1, 4);
+            //int pasirinkimasPagalId = Int32.Parse(Console.ReadLine());
+            rinicializavimasKlasese(vardas[pasirinkimasPagalId - 1],
+                galia[pasirinkimasPagalId - 1],
+                kaina[pasirinkimasPagalId - 1],
+                svoris[pasirinkimasPagalId - 1]);
+        }
+        public void rinicializavimasKlasese(string a, int b, int c, int d)
+        {
+            botRobot.Add(a, (b, c, d));
+
+        }
+
+        public void robotoParametrai()
+        {
+            int i = 1;
+            Console.WriteLine("------------------------------------------------------");
+            Console.WriteLine("Sukonstravote super");
+            Console.WriteLine("techmologini \"Killer\"");
+            Console.WriteLine("klases robota");
+            Console.WriteLine("------------------------------------------------------");
+            Console.WriteLine("Jusu pasirinktos dalys:");
+            foreach (var item in botRobot)
+            {
+                Console.WriteLine(Enum.GetName(typeof(rSegmentai), i) + "\t\t\t\t" + item.Key);
+                i++;
+            }
+            Console.WriteLine("------------------------------------------------------");
+        }
+
+    }
+
+}

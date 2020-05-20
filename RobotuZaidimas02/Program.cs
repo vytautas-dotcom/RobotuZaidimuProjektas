@@ -1,4 +1,5 @@
 ﻿using KonstravimasPrisijungimas;
+//using randomKonstravimas;
 using RobotoDalys;
 using System;
 using System.Collections.Generic;
@@ -17,6 +18,12 @@ namespace RobotuZaidimas02
             rankinisKonstravimas.RankinisIsrinkimas();
 
             rankinisKonstravimas.robotoParametrai();
+
+            Account account1 = new Account("Killer");
+            randomKonstravimas random = new randomKonstravimas();
+            random.RankinisIsrinkimas();
+
+            random.robotoParametrai();
 
             Console.ReadKey();
 

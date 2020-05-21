@@ -13,7 +13,7 @@ namespace RobotoDalys
         public int Kaina { get; set; } = 10;
         public int Svoris { get; set; } = 10;
 
-        public void didejaGyvybe()
+        public void didejaGyvybe(int a, int b)
         {
             throw new NotImplementedException();
         }

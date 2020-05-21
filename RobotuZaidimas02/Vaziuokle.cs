@@ -13,9 +13,12 @@ namespace RobotoDalys
         public int Kaina { get; set; } = 10;
         public int Svoris { get; set; } = 10;
 
-        public void didejaGyvybe()
+        public void didejaGyvybe(int a, int b)
         {
-            throw new NotImplementedException();
+            if (b < 0.7 * a)
+            {
+                Console.WriteLine("Zinute");
+            }
         }
 
         public void mazejaGyvybe()

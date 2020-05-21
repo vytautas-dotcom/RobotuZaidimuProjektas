@@ -17,16 +17,28 @@ namespace RobotuZaidimas02
         static void Main(string[] args)
         {
 
-            //userRobot user = new userRobot();
-            //user.Konstravimas();
+            userRobot user = new userRobot();
+            user.Konstravimas();
+
+            int a = user.userRobotoDalys[0].Galia;
+            //double b = user.userRobotoDalys1[0].Galia * 0.6;
+            //int c = (int)b;
+
+            //user.userRobotoDalys[0].didejaGyvybe(a, c);
 
 
-            //BotRobot bot = new BotRobot();
-            //bot.Konstravimas();
+            BotRobot bot = new BotRobot();
+            bot.Konstravimas();
 
-            Account account = new Account("sdfasf", "");
+            int b = bot.botRobotoDalys[0].Galia;
 
-            
+            Kova kova = new Kova();
+            kova.RobotuKova(a, b);
+
+
+
+
+            //Account account = new Account("sdfasf", "");
 
 
             #region RANDOM

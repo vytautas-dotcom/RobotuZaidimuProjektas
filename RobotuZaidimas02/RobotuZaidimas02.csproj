@@ -50,6 +50,7 @@
     <Compile Include="Ginklai.cs" />
     <Compile Include="IDalis.cs" />
     <Compile Include="IsmaniejiGinklai.cs" />
+    <Compile Include="Kova.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="randomKonstravimas.cs" />

@@ -7,7 +7,7 @@
             int Kaina { get; set; }
             int Svoris { get; set; }
 
-            void didejaGyvybe();
+            void didejaGyvybe(int a, int b);
 
             void mazejaGyvybe();
         }

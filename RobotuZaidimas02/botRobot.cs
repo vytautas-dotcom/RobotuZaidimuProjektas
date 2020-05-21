@@ -1,4 +1,5 @@
-﻿using System;
+﻿using KonstravimasPrisijungimas;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,7 +21,9 @@ namespace Robotai
 
         public override void Konstravimas()
         {
-            throw new NotImplementedException();
+            randomKonstravimas random = new randomKonstravimas();
+            random.RankinisIsrinkimas();
+            random.robotoParametrai();
         }
     }
 }

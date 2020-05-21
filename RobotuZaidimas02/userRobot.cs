@@ -1,4 +1,5 @@
-﻿using RobotoDalys;
+﻿using KonstravimasPrisijungimas;
+using RobotoDalys;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,7 @@ namespace Robotai.RobotoDalys
 {
     class userRobot : Robotas
     {
-        public object Vaziuokle { get; set; }
-        public Sarvai Sarvai { get; set; }
-        public Variklis Variklis { get; set; }
-        public Valdymas Valdymas { get; set; }
-        public IDalis Ginklas { get; set; }
+        public List<IDalis> userRobotoDalys { get; set; }
         public override int Ataka()
         {
             throw new NotImplementedException();
@@ -26,7 +23,9 @@ namespace Robotai.RobotoDalys
 
         public override void Konstravimas()
         {
-            throw new NotImplementedException();
+            rankinisKonstravimas rankinis = new rankinisKonstravimas();
+            rankinis.RankinisIsrinkimas();
+            rankinis.robotoParametrai();
         }
     }
 }

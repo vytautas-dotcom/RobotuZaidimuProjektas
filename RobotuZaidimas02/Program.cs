@@ -1,4 +1,6 @@
 ﻿using KonstravimasPrisijungimas;
+using Robotai;
+using Robotai.RobotoDalys;
 //using randomKonstravimas;
 using RobotoDalys;
 using System;
@@ -7,24 +9,54 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace RobotuZaidimas02
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Account account = new Account("Killer");
-            rankinisKonstravimas rankinisKonstravimas = new rankinisKonstravimas();
-            rankinisKonstravimas.RankinisIsrinkimas();
+            
+            userRobot user = new userRobot();
+            user.Konstravimas();
 
-            rankinisKonstravimas.robotoParametrai();
+            BotRobot bot = new BotRobot();
+            bot.Konstravimas();
 
-            Account account1 = new Account("Killer");
-            randomKonstravimas random = new randomKonstravimas();
-            random.RankinisIsrinkimas();
 
-            random.robotoParametrai();
 
+            #region RANDOM
+            //Account account1 = new Account("Killer");
+            //randomKonstravimas random = new randomKonstravimas();
+            //random.RankinisIsrinkimas();
+
+            //int vgalia = 0;
+            //int vkaina = 0;
+            //int vsvoris = 0;
+            //foreach (var item in random.botRobot.Values)
+            //{
+            //    vgalia += item.Item1;
+            //    vkaina += item.Item2;
+            //    vsvoris += item.Item3;
+            //}
+            //Console.WriteLine($"{vgalia} {vkaina} {vsvoris}");
+
+            //string arr = "Lazeris                            ";
+            //foreach (var item in random.botRobot.Keys)
+            //{
+            //    if (item == arr)
+            //    {
+            //        Console.BackgroundColor = ConsoleColor.Red;
+            //        Console.WriteLine(item);
+            //        Console.ResetColor();
+            //    }
+            //    else
+            //        Console.WriteLine(item);
+
+            //}
+
+            //random.robotoParametrai();
+            #endregion
             Console.ReadKey();
 
             #region AutomatinisValdymas

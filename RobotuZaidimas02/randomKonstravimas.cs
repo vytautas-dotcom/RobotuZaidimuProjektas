@@ -21,7 +21,7 @@ namespace KonstravimasPrisijungimas
 
     class randomKonstravimas
     {
-        Dictionary<string, (int, int, int)> botRobot = new Dictionary<string, (int, int, int)>();
+        public Dictionary<string, (int, int, int)> botRobot = new Dictionary<string, (int, int, int)>();
         Random rnd = new Random();
         public string UzklausaString(string b, int c)
         {

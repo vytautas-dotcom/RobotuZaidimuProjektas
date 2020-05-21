@@ -21,7 +21,7 @@ namespace KonstravimasPrisijungimas
         
     class rankinisKonstravimas
     {
-        Dictionary<string, (int, int, int)> userRobot = new Dictionary<string, (int, int, int)>();
+        public Dictionary<string, (int, int, int)> userRobot = new Dictionary<string, (int, int, int)>();
         Random rnd = new Random();
         public string UzklausaString(string b, int c)
         {

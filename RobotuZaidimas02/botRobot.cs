@@ -11,7 +11,7 @@ namespace Robotai
 {
     class BotRobot : Robotas
     {
-        public List<IDalis> botRobotoDalys { get; set; }
+        public List<IDalis> botRobotoDalys = new List<IDalis>();
 
         void objektaiRobotui()
         {
@@ -38,7 +38,16 @@ namespace Robotai
             random.RankinisIsrinkimas();
             random.robotoParametrai();
 
-            
+            objektaiRobotui();
+            int i = 0;
+            foreach (var item in random.botRobot)
+            {
+                botRobotoDalys[i].Pavadinimas = item.Key;
+                botRobotoDalys[i].Galia = item.Value.Item1;
+                botRobotoDalys[i].Kaina = item.Value.Item2;
+                botRobotoDalys[i].Svoris = item.Value.Item3;
+                i++;
+            }
         }
     }
 }

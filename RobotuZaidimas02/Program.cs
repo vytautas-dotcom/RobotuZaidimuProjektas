@@ -16,14 +16,17 @@ namespace RobotuZaidimas02
     {
         static void Main(string[] args)
         {
-            
-            userRobot user = new userRobot();
-            user.Konstravimas();
-            user.showList();
+
+            //userRobot user = new userRobot();
+            //user.Konstravimas();
+
 
             //BotRobot bot = new BotRobot();
             //bot.Konstravimas();
 
+            Account account = new Account("sdfasf", "");
+
+            
 
 
             #region RANDOM

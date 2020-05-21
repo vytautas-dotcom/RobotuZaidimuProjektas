@@ -1,4 +1,5 @@
 ﻿using KonstravimasPrisijungimas;
+using Robotai;
 using Robotai.RobotoDalys;
 using System;
 using System.Collections.Generic;
@@ -11,20 +12,22 @@ namespace RobotuZaidimas02
     class Account
     {
         public string Vardas { get; set; }
-        public List<string> DaliuListas { get; set; }
         public int Suma { get; set; } = 5000;
-        public Account(string vardas, rankinisKonstravimas Dalys)
+        public Account(string vardas, string a)
         {
             Vardas = vardas;
-            DaliuIstraukimas(Dalys);
-            
-        }
-        public void DaliuIstraukimas(rankinisKonstravimas Dalys)
-        {
-            foreach (var item in Dalys.userRobot.Keys)
+            if (a == "user")
             {
-                DaliuListas.Add(item);
+                userRobot user = new userRobot();
+                user.Konstravimas();
             }
+            else if(a == "bot")
+            {
+                BotRobot bot = new BotRobot();
+                bot.Konstravimas();
+            }
+            else
+                Console.WriteLine("Have a nice day :)");
         }
         
     }

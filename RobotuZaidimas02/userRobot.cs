@@ -50,12 +50,12 @@ namespace Robotai.RobotoDalys
                 i++;
             }  
         }
-        public void showList()
-        {
-            foreach (var item in userRobotoDalys)
-            {
-                Console.WriteLine(item.Galia);
-            }
-        }
+        //public void showList()
+        //{
+        //    foreach (var item in userRobotoDalys)
+        //    {
+        //        Console.WriteLine(item.);
+        //    }
+        //}
     }
 }

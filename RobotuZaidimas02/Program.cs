@@ -19,9 +19,10 @@ namespace RobotuZaidimas02
             
             userRobot user = new userRobot();
             user.Konstravimas();
+            user.showList();
 
-            BotRobot bot = new BotRobot();
-            bot.Konstravimas();
+            //BotRobot bot = new BotRobot();
+            //bot.Konstravimas();
 
 
 

@@ -8,19 +8,10 @@ namespace RobotoDalys
 {
     public class Vaziuokle : IDalis
     {
-        public string Pavadinimas { get; set; }
-        public int Gyvybe { get; set; }
-        public int Kaina { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Svoris { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        
-        public void setPavadinimas(string a)
-        {
-            Pavadinimas = a;
-        }
-        public void getVaziuokle()
-        {
-            Console.WriteLine(Pavadinimas);
-        }
+        public string Pavadinimas { get; set; } = "fhrx";
+        public int Galia { get; set; } = 10;
+        public int Kaina { get; set; } = 10;
+        public int Svoris { get; set; } = 10;
 
         public void didejaGyvybe()
         {
@@ -31,7 +22,5 @@ namespace RobotoDalys
         {
             throw new NotImplementedException();
         }
-
-        
     }
 }

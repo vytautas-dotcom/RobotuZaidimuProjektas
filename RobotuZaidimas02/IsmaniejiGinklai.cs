@@ -1,21 +1,19 @@
-﻿using System;
+﻿using RobotoDalys;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RobotoDalys
+namespace RobotuZaidimas02
 {
     class IsmaniejiGinklai : IDalis
     {
-        public string Pavadinimas { get; set; }
-        public int Gyvybe { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Kaina { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public int Svoris { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
-        public void setPavadinimas(string a)
-        {
-            Pavadinimas = a;
-        }
+        public string Pavadinimas { get; set; } = "fhrx";
+        public int Galia { get; set; } = 10;
+        public int Kaina { get; set; } = 10;
+        public int Svoris { get; set; } = 10;
+
         public void didejaGyvybe()
         {
             throw new NotImplementedException();
